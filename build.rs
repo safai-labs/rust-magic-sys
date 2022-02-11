@@ -40,7 +40,9 @@ fn main() {
             None => {
                 match (static_lib.exists(), shared_lib.exists()) {
                     (false, false) => panic!("Neither libmagic.so, nor libmagic.a was found in {:?}", magic_dir),
-                    (true, false) => println!("cargo:rustc-link-lib=static=magic"),
+                    (true, false) => {
+                        println!("cargo:rustc-link-lib=static=magic");
+                    },
                     (false, true) => println!("cargo:rustc-link-lib=dylib=magic"),
                     (true, true) => panic!("Both a static and a shared library were found in {:?}\nspecify a choice with `MAGIC_STATIC=true|false`", magic_dir),
                 }
@@ -60,4 +62,7 @@ fn main() {
         // default fall through: try linking dynamically to just `libmagic` without further config
         println!("cargo:rustc-link-lib=dylib=magic");
     }
+        println!("cargo:rustc-link-lib=bz2");
+        println!("cargo:rustc-link-lib=lzma");
+        println!("cargo:rustc-link-lib=z");
 }
