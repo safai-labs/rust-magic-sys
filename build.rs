@@ -1,6 +1,6 @@
 fn env(name: &str) -> Option<std::ffi::OsString> {
     let target = std::env::var("TARGET").expect("Cargo didn't provide `TARGET` environment var");
-    let target = target.to_uppercase().replace("-", "_");
+    let target = target.to_uppercase().replace('-', "_");
     let prefixed_name = format!("{}_{}", target, name);
     println!("cargo:rerun-if-env-changed={}", prefixed_name);
     match std::env::var_os(prefixed_name) {
