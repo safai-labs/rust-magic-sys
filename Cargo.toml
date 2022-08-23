@@ -26,7 +26,6 @@ exclude = [
     "nix/",
     "deny.toml",
 ]
-rust-version = "1.38"
 
 [badges]
 maintenance = { status = "passively-maintained" }
