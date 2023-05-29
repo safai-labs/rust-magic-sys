@@ -1,4 +1,4 @@
 [env]
 # set the variables for rust-magic crate
-MAGIC_DIR = { value = "../file/src/.libs", relative = true }
-MAGIC_STATIC = "true"
+# MAGIC_DIR = { value = "file/src/.libs", relative = true }
+# MAGIC_STATIC = "true"
