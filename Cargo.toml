@@ -14,7 +14,7 @@ categories = [
 repository = "https://github.com/robo9k/rust-magic-sys.git"
 license = "MIT/Apache-2.0"
 version = "0.3.0"
-authors = ["robo9k <robo9k@symlink.io>"]
+authors = ["robo9k <robo9k@symlink.io>", "Ahmed Masud <ahmed.masud@saf.ai>"]
 links = "magic"
 exclude = [
     ".gitignore",
@@ -68,3 +68,5 @@ msrv = "1.38.0"
 [package.metadata.docs.rs]
 all-features = true
 targets = []
+
+
