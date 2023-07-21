@@ -1,0 +1,2 @@
+deb:
+	cd file && rm -rf dist && if [ ! -f config.status ] ; then ./configure --prefix=/usr --enable-static --enable-shared ; fi && make -j 20 && make install DESTDIR=$$PWD/dist
