@@ -1,2 +1,6 @@
 /target
-Cargo.lock
+*.deb
+*.ddeb
+*.udeb
+*.buildinfo
+*.changes
