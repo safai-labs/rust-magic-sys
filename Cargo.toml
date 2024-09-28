@@ -1,32 +1,24 @@
 [package]
 name = "magic-sys"
 description = "Declarations for the `libmagic` C library"
-keywords = [
-    "magic",
-    "file",
-    "ffi",
-    "bindings",
-]
-categories = [
-    "external-ffi-bindings",
-    "no-std",
-]
+keywords = ["magic", "file", "ffi", "bindings"]
+categories = ["external-ffi-bindings", "no-std"]
 repository = "https://github.com/robo9k/rust-magic-sys.git"
 license = "MIT/Apache-2.0"
 version = "0.3.0"
 authors = ["robo9k <robo9k@symlink.io>", "Ahmed Masud <ahmed.masud@saf.ai>"]
 links = "magic"
 exclude = [
-    ".gitignore",
-    ".gitattributes",
-    "/.github/",
-    "/.vscode/",
-    "rust-toolchain.toml",
-    "shell.nix",
-    "nix/",
-    "deny.toml",
+  ".gitignore",
+  ".gitattributes",
+  "/.github/",
+  "/.vscode/",
+  "rust-toolchain.toml",
+  "shell.nix",
+  "nix/",
+  "deny.toml",
 ]
-
+edition = "2018"
 [badges]
 maintenance = { status = "passively-maintained" }
 
@@ -78,15 +70,51 @@ section = "libs"
 priority = "required"
 replaces = "file"
 assets = [
-    [ "file/dist/usr/lib/libmagic.la", "usr/lib/libmagic.la", "0444" ],
-    [ "file/dist/usr/lib/libmagic.a", "usr/lib/libmagic.a", "0555" ],
-    [ "file/dist/usr/lib/pkgconfig/libmagic.pc", "usr/lib/pkgconfig/libmagic.pc", "0444" ],
-    [ "file/dist/usr/bin/file", "usr/bin/file", "0555" ],
-    [ "file/dist/usr/include/magic.h", "usr/include/magic.h", "0444" ],
-    [ "file/dist/usr/share/misc/magic.mgc", "usr/share/misc/magic.mgc", "0444" ],
-    [ "file/dist/usr/share/man/man1/file.1", "usr/share/man/man1/file.1", "0444" ],
-    [ "file/dist/usr/share/man/man3/libmagic.3", "usr/share/man/man3/libmagic.3", "0555" ],
-    [ "file/dist/usr/share/man/man4/magic.4", "usr/share/man/man4/magic.4", "0444" ]
+  [
+    "file/dist/usr/lib/libmagic.la",
+    "usr/lib/libmagic.la",
+    "0444",
+  ],
+  [
+    "file/dist/usr/lib/libmagic.a",
+    "usr/lib/libmagic.a",
+    "0555",
+  ],
+  [
+    "file/dist/usr/lib/pkgconfig/libmagic.pc",
+    "usr/lib/pkgconfig/libmagic.pc",
+    "0444",
+  ],
+  [
+    "file/dist/usr/bin/file",
+    "usr/bin/file",
+    "0555",
+  ],
+  [
+    "file/dist/usr/include/magic.h",
+    "usr/include/magic.h",
+    "0444",
+  ],
+  [
+    "file/dist/usr/share/misc/magic.mgc",
+    "usr/share/misc/magic.mgc",
+    "0444",
+  ],
+  [
+    "file/dist/usr/share/man/man1/file.1",
+    "usr/share/man/man1/file.1",
+    "0444",
+  ],
+  [
+    "file/dist/usr/share/man/man3/libmagic.3",
+    "usr/share/man/man3/libmagic.3",
+    "0555",
+  ],
+  [
+    "file/dist/usr/share/man/man4/magic.4",
+    "usr/share/man/man4/magic.4",
+    "0444",
+  ],
 ]
 
-provides =  "file"
+provides = "file"
